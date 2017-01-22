@@ -1,0 +1,191 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2.algoritma_ödevi
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("JACKPOT MACHINE");
+            int colour1, colour2, colour3, a, b, c;
+
+
+            Random rand = new Random();
+            colour1 = rand.Next(1, 4);
+            colour2 = rand.Next(1, 4);
+            colour3 = rand.Next(1, 4);
+            a = rand.Next(1, 7);
+            b = rand.Next(1, 7);
+            c = rand.Next(1, 7);
+
+
+            if (colour1 == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(a);
+
+
+            }
+            else if (colour1 == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(a);
+
+            }
+
+            else if (colour1 == 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write(a);
+
+            }
+            Console.Write(" ");
+            if
+            (colour2 == 1)
+
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(b);
+
+            }
+            else if (colour2 == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(b);
+
+            }
+
+            else if (colour2 == 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write(b);
+
+            }
+            Console.Write(" ");
+            if
+           (colour3 == 1)
+
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(c);
+
+            }
+            else if (colour3 == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(c);
+
+            }
+
+            else if (colour3 == 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine(c);
+
+            }
+
+
+            if (colour1 == colour2 && colour2 == colour3)
+            {
+                
+                if (a == b && b == c)
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $30.");
+
+                }
+                else if ((Math.Abs(a - b) == 1 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 2) || (Math.Abs(a - b) == 2 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 1) ||(Math.Abs(a-b)==1 && Math.Abs(b-c)==2 && Math.Abs(a-c)== 1))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $20.");
+                }
+                else if ((a != b && b != c && a!= c) && ((Math.Abs(a - b) != 1 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 2) || (Math.Abs(a - b) != 2 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 1) || (Math.Abs(a - b) != 1 && Math.Abs(b - c) != 2 && Math.Abs(a - c) != 1)))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $10.");
+                }
+                
+                else if (((a == b) || (b == c) || (a == c)) && ((Math.Abs(a - b) != 1 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 2) || (Math.Abs(a - b) != 2 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 1) || (Math.Abs(a - b) != 1 && Math.Abs(b - c) != 2 && Math.Abs(a - c) != 1)))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $6.");
+                }
+                else
+                {
+                    Console.WriteLine("You lost :(");
+
+                }
+
+            }
+            else if (colour1 != colour2 && colour2 != colour3 && colour1 != colour3)
+
+            {
+
+                if (a == b && b == c)
+
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $28.");
+
+                }
+                else if ((Math.Abs(a - b) == 1 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 2) || (Math.Abs(a - b) == 2 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 1) || (Math.Abs(a - b) == 1 && Math.Abs(b - c) == 2 && Math.Abs(a - c) == 1))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $18.");
+                }
+                else if ((a != b && b != c && a !=c) && ((Math.Abs(a - b) != 1 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 2) || (Math.Abs(a - b) != 2 && Math.Abs(b - c) != 1 && Math.Abs(a - c) != 1) || (Math.Abs(a - b) != 1 && Math.Abs(b - c) != 2 && Math.Abs(a - c) != 1)))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $8.");
+                }
+                
+                else
+                {
+                    Console.WriteLine("You lost :(");
+
+                }
+                
+                
+            }
+
+
+            else if (colour1 == colour2 || colour2 == colour3 || colour1 == colour3)
+            {
+                if (a == b && b == c)
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $26.");
+                }
+                else if ((Math.Abs(a - b) == 1 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 2) || (Math.Abs(a - b) == 2 && Math.Abs(b - c) == 1 && Math.Abs(a - c) == 1) || (Math.Abs(a - b) == 1 && Math.Abs(b - c) == 2 && Math.Abs(a - c) == 1))
+                {
+                    Console.WriteLine("Congratulations!!");
+                    Console.WriteLine("You win $16.");
+
+                }
+                else
+                {
+                    Console.WriteLine("You lost :(");
+
+                }
+
+            }
+             
+            else 
+            {
+                Console.WriteLine("You lost :(");
+            }
+
+            if (((a % 2 == 0) && (b % 2 == 0) && (c % 2 == 0)) || ((a % 2 == 1) && (b % 2 == 1) && (c % 2 == 1)))
+            {
+                Console.WriteLine();
+                Console.WriteLine("You win $3 bonus.");
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
