@@ -1,6 +1,6 @@
 # Jackpot-Machine
 Question
-
+xdfsdfsdfsjhdfdbeuhfwefsulgawşıehsfsovyib 4
 Write a C# program for "Jackpot Machine" that prints the coins he gets.
 Don’t take any input from the user, just print the output. 
 
